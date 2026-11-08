@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Six sessions on writing one page for an executive who has four minutes: the decision on top, the right format, the evidence behind it, a skim-survival bench computed in your browser, options and confidence language, and getting the memo read. Free, by Phoebe Fu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Learn Executive Briefings with Phoebe">
+<meta property="og:description" content="One page, the decision first, the evidence behind it: how to write for someone with four minutes.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-executive-briefings-with-phoebe/">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-executive-briefings-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn Executive Briefings with Phoebe">
+<meta name="twitter:description" content="One page, the decision first, the evidence behind it. A skim-survival bench computed in your browser.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-executive-briefings-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Learn Executive Briefings with Phoebe</title>
+<link rel="stylesheet" href="assets/style.css?v=2">
+<style>
+
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: 1; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.16); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo-deep); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--muted); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,var(--indigo-50)); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .not-this { border: 1px solid var(--hairline); border-left: 4px solid var(--clay); border-radius: var(--radius); background: #fff; padding: 1.1rem 1.3rem; margin-top: 1.2rem; }
+  .not-this h3 { font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn with Phoebe · Communication</div>
+    <h1>Learn <span class="accent">Executive Briefings</span> with Phoebe</h1>
+    <p class="sub">One page, the decision first, the evidence behind it: how to write for someone with four minutes. Six sessions for data and analytics leads, and the practitioners who write up for them, on the decision memo, the pre-read and the briefing as artifacts. Who reads it and what goes on top, which format wins when, the evidence that earns its place, how to show options, risk and confidence honestly, and how to get the page read and the decision recorded. One constructed running case, a logistics company's head of data asking her CEO to approve a customer-data platform, and one bench: a skim-survival test computed in your browser on four versions of her memo, or on yours.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="4">4</b><span>versions of one memo on the bench</span></div>
+      <div class="stat"><b data-count="238">238</b><span>words a minute, the measured base rate</span></div>
+      <div class="stat"><b data-count="5">5</b><span>must-survive elements tested</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The six sessions 🧭 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· from the reader to the decision record</span></h2>
+      <p class="plede">The running case is <strong>Fernhollow Freight, a constructed mid-size logistics company</strong>, continued from Stakeholder Management with the same people. Sunniva Holm, head of data, has mapped who decides; now she writes the one-page memo asking Marguerite Vance, the CEO, to approve one shared customer record across sales, the depots and billing. Fernhollow and everyone in it are invented for teaching, and every page says so.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-the-decision-on-top.html" style="--diff:#34D399">
+        <span class="cicon">📝</span>
+        <span class="cnum">Session 1 · foundations</span>
+        <h3>Who reads it, and the decision on top</h3>
+        <p>The reader with four minutes, decision memo against information memo, a title that states the decision, and a reader card built from the stakeholder map.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span></span>
+      </a>
+      <a class="course-card" href="courses/02-pick-the-format.html" style="--diff:#FBBF24">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Session 2 · core</span>
+        <h3>Pick the format</h3>
+        <p>One-page decision memo, pre-read, Amazon's narrative memo, a bottom-line-first note and Churchill's 1940 minute on brevity, read at source where possible: when each one wins.</p>
+        <span class="meta"><span class="pill">the right shape</span></span>
+      </a>
+      <a class="course-card" href="courses/03-the-evidence-behind-it.html" style="--diff:#FBBF24">
+        <span class="cicon">📎</span>
+        <span class="cnum">Session 3 · core</span>
+        <h3>The evidence behind it</h3>
+        <p>One number per claim with its source line, the one exhibit that earns its place, the appendix as the place detail goes to be optional, and what to cut.</p>
+        <span class="meta"><span class="pill">one number per claim</span></span>
+      </a>
+      <a class="course-card" href="courses/04-the-skim-survival-bench.html" style="--diff:#F87171">
+        <span class="cicon">⏱️</span>
+        <span class="cnum">Session 4 · bench night</span>
+        <h3>The skim-survival bench</h3>
+        <p>Four versions of one memo, or your own text, read by a stated skim model. Which of the decision, ask, deadline, cost and risk survive 30 seconds, 90 seconds and four minutes.</p>
+        <span class="meta"><span class="pill amber">★ the bench</span></span>
+      </a>
+      <a class="course-card" href="courses/05-options-risk-and-confidence.html" style="--diff:#FB923C">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Session 5 · deeper</span>
+        <h3>Options, risk and confidence language</h3>
+        <p>The recommendation with the rejected options shown fairly, the risk you name before they do, and one confidence sentence per claim, from Sherman Kent's 1964 essay to the US intelligence standard.</p>
+        <span class="meta"><span class="pill">say how sure</span></span>
+      </a>
+      <a class="course-card" href="courses/06-send-land-follow-up.html" style="--diff:#FB923C">
+        <span class="cicon">📬</span>
+        <span class="cnum">Session 6 · deeper</span>
+        <h3>Send, land, follow up</h3>
+        <p>The cover email, when a pre-read goes out, what to do when it is not read, versions, and the decision record afterwards. Capstone: Sunniva's final one-page memo assembled.</p>
+        <span class="meta"><span class="pill amber">🔒 the final memo</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>foundations</span>
+      <span><i style="background:#FBBF24"></i>core</span>
+      <span><i style="background:#FB923C"></i>deeper</span>
+      <span><i style="background:#F87171"></i>bench night</span>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Your passport 🎫</h2>
+      <p class="plede">Clear all three quiz questions in a session and it gets stamped. Six stamps means you can put the decision on top, pick the format, cut the evidence to what earns its place, test a memo the way a skimming reader meets it, write options and confidence honestly, and get the page read and the decision recorded. Stamps live in this browser only.</p>
+    </div>
+    <div class="pp-strip"></div>
+  </section>
+  <section class="section">
+    <div class="not-this">
+      <h3>What this is not, so you land in the right place 🧭</h3>
+      <table class="clean">
+        <tr><th>If your question is</th><th>Go here instead</th></tr>
+        <tr><td>What am I actually asking for, and how do the pyramid and bottom line up front work?</td><td><a href="https://phoebefu6.github.io/learn-communication-with-phoebe/courses/03-structure.html">Communication, Structure ↗</a></td></tr>
+        <tr><td>How do I make each sentence clearer?</td><td><a href="https://phoebefu6.github.io/learn-communication-with-phoebe/courses/04-the-written-version.html">Communication, The written version ↗</a></td></tr>
+        <tr><td>Who decides, and what are they measured on and afraid of?</td><td><a href="https://phoebefu6.github.io/learn-stakeholder-management-with-phoebe/">Stakeholder Management ↗</a></td></tr>
+        <tr><td>Update, report or memo: which one, and how do I write it with AI tools?</td><td><a href="https://phoebefu6.github.io/learn-ai-writing-with-phoebe/courses/b5-updates-and-memos.html">AI Writing, Updates, reports, decision memos ↗</a></td></tr>
+        <tr><td>How do I choose between the options in the first place?</td><td><a href="https://phoebefu6.github.io/learn-decision-intelligence-with-phoebe/">Decision Intelligence ↗</a></td></tr>
+        <tr><td>I need slides or a deck</td><td><a href="https://phoebefu6.github.io/learn-visual-storytelling-with-phoebe/">Visual Storytelling ↗</a></td></tr>
+        <tr><td><strong>I need one page that an executive with four minutes will read, act on, and not misunderstand.</strong></td><td><strong>you are in the right place</strong></td></tr>
+      </table>
+      <p style="margin-top:.7rem;font-size:.86rem;color:var(--muted)"><strong>The written page, for one executive reader.</strong> Sentence craft, slides and choosing between options are taught next door and linked from here rather than repeated; presenting to a board is a planned course. Pressure on these pages means workload and planning, never medical or clinical advice; for the body side, see the movement and wellbeing courses planned on the <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe hub ↗</a>.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: the reader gets what you put where they look.</p>
+      <div class="path"><b>📅 My memo goes out this week</b>
+        <a class="pstep" href="courses/01-the-decision-on-top.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-the-skim-survival-bench.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-options-risk-and-confidence.html">5</a>
+        <span style="font-size:.82rem;color:var(--muted)">decision on top, test the skim, write the risk</span>
+      </div>
+      <div class="path"><b>📊 I write up analysis for my lead</b>
+        <a class="pstep" href="courses/03-the-evidence-behind-it.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/01-the-decision-on-top.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-options-risk-and-confidence.html">5</a>
+        <span style="font-size:.82rem;color:var(--muted)">evidence that earns its place, then the top, then confidence</span>
+      </div>
+      <div class="path"><b>🧭 The whole craft</b>
+        <a class="pstep" href="courses/01-the-decision-on-top.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-pick-the-format.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-the-evidence-behind-it.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-the-skim-survival-bench.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-options-risk-and-confidence.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-send-land-follow-up.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">from the reader to the decision record</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>What is honest here 🧾</h2>
+      <p class="plede">Writing advice travels with famous numbers, and several of the most quoted have no source behind them. Each claim on these pages carries its status.</p>
+    </div>
+    <table class="clean">
+      <tr><th>Claim</th><th>Status</th></tr>
+      <tr><td>The parse of a memo, its word counts and the words before the ask</td><td><strong>Really computed</strong> in your browser from the memo text</td></tr>
+      <tr><td>Which elements a skimming reader reaches by 30 seconds, 90 seconds and four minutes</td><td><strong>Modelled</strong> by a stated reading order and an assumed skim multiplier on 238 words a minute, both printed on the widget; read the order of the versions, not the exact seconds</td></tr>
+      <tr><td>238 words a minute</td><td><strong>Measured:</strong> a 2019 meta-analysis of 190 studies, adults reading English non-fiction silently</td></tr>
+      <tr><td>"Executives spend eight seconds on a memo", "they only read the first two lines"</td><td><strong>No source found.</strong> Not quoted anywhere on these pages</td></tr>
+      <tr><td>"Amazon banned PowerPoint"</td><td><strong>Narrower at source:</strong> Bezos's 2017 shareholder letter says Amazon does not do slide presentations and reads six-page narrative memos in silence at the start of meetings; the original email is reported</td></tr>
+      <tr><td>Fernhollow Freight, Sunniva and every Fernhollow number</td><td><strong>Constructed,</strong> for teaching</td></tr>
+    </table>
+  </section>
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole path at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+  <footer class="pagefoot">
+    <span>learn-executive-briefings-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span>Neighbours on the shelf: <a href="https://phoebefu6.github.io/learn-stakeholder-management-with-phoebe/">Stakeholder Management ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-communication-with-phoebe/">Communication ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-decision-intelligence-with-phoebe/">Decision Intelligence ↗</a></span>
+  </footer>
+</main>
+<script>
+window.MINDMAP_DATA = {
+ "title": "Executive\nBriefings",
+ "centerColor": "#5A1215",
+ "sessions": [
+  {
+   "label": "Who reads it,\nthe decision on top",
+   "href": "courses/01-the-decision-on-top.html",
+   "color": "#34D399",
+   "concepts": [
+    {
+     "label": "The reader's minutes",
+     "href": "courses/01-the-decision-on-top.html"
+    },
+    {
+     "label": "Decision or information",
+     "href": "courses/01-the-decision-on-top.html"
+    },
+    {
+     "label": "The decision title",
+     "href": "courses/01-the-decision-on-top.html"
+    }
+   ]
+  },
+  {
+   "label": "Pick the\nformat",
+   "href": "courses/02-pick-the-format.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "Four formats",
+     "href": "courses/02-pick-the-format.html"
+    },
+    {
+     "label": "The narrative memo",
+     "href": "courses/02-pick-the-format.html"
+    },
+    {
+     "label": "When each wins",
+     "href": "courses/02-pick-the-format.html"
+    }
+   ]
+  },
+  {
+   "label": "The evidence\nbehind it",
+   "href": "courses/03-the-evidence-behind-it.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "One number per claim",
+     "href": "courses/03-the-evidence-behind-it.html"
+    },
+    {
+     "label": "The exhibit",
+     "href": "courses/03-the-evidence-behind-it.html"
+    },
+    {
+     "label": "The appendix",
+     "href": "courses/03-the-evidence-behind-it.html"
+    }
+   ]
+  },
+  {
+   "label": "The skim-survival\nbench",
+   "href": "courses/04-the-skim-survival-bench.html",
+   "color": "#F87171",
+   "concepts": [
+    {
+     "label": "The skim model",
+     "href": "courses/04-the-skim-survival-bench.html"
+    },
+    {
+     "label": "Context up front",
+     "href": "courses/04-the-skim-survival-bench.html"
+    },
+    {
+     "label": "Bury the ask",
+     "href": "courses/04-the-skim-survival-bench.html"
+    }
+   ]
+  },
+  {
+   "label": "Options, risk,\nconfidence",
+   "href": "courses/05-options-risk-and-confidence.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "Options shown fairly",
+     "href": "courses/05-options-risk-and-confidence.html"
+    },
+    {
+     "label": "Name the risk first",
+     "href": "courses/05-options-risk-and-confidence.html"
+    },
+    {
+     "label": "Words of probability",
+     "href": "courses/05-options-risk-and-confidence.html"
+    }
+   ]
+  },
+  {
+   "label": "Send, land,\nfollow up",
+   "href": "courses/06-send-land-follow-up.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "The cover email",
+     "href": "courses/06-send-land-follow-up.html"
+    },
+    {
+     "label": "When it is not read",
+     "href": "courses/06-send-land-follow-up.html"
+    },
+    {
+     "label": "The decision record",
+     "href": "courses/06-send-land-follow-up.html"
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
